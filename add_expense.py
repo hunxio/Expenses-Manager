@@ -1,9 +1,11 @@
-import customtkinter
-import pandas as pd
+# Root files
 import Constants
 import file_manager
+# Modules
+import customtkinter
+import pandas as pd
 
-def add_expense(application):
+def add_expense(application) -> None:
 
     global payment_check, category_check, name_expense_input, amount_expense_input
 
@@ -45,15 +47,16 @@ def add_expense(application):
 
 
 
-def category_event(variable_name):
+
+def category_event(variable_name: str) -> str:
     return variable_name.get()
 
 
-def payment_event(variable_name):
+def payment_event(variable_name: str) -> str:
     return variable_name.get()
 
 
-def submit_add_expense():
+def submit_add_expense() -> None:
     name_expense = name_expense_input.get().title().strip()
     amount_expense = amount_expense_input.get()
     try:
