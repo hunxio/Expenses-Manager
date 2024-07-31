@@ -1,6 +1,6 @@
 # Root files
 import Constants
-import utils
+import add_expense
 # Modules
 import customtkinter
 import os
@@ -33,7 +33,7 @@ def gui():
 
 
     # Button Widgets
-    button_add_expense = customtkinter.CTkButton(app, text="Aggiungi spesa", command=lambda: utils.add_expense(app))
+    button_add_expense = customtkinter.CTkButton(app, text="Aggiungi spesa", command=lambda: add_expense.add_expense(app))
     button_add_expense.grid(row=2, column=0, padx=10, pady=15)
 
     button_check_expense = customtkinter.CTkButton(app, text="Controlla spese", command=None)
