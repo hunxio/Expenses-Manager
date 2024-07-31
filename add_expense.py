@@ -60,6 +60,7 @@ def submit_add_expense():
         amount_expense = "{:.2f}".format(int(amount_expense)).strip()
     except ValueError:
         amount_expense_replace = amount_expense.replace(",", ".")
+        amount_expense = "{:.2f}".format(float(amount_expense_replace)).strip()
         print(type(amount_expense))
     category = category_event(category_check).title()
     payment = payment_event(payment_check).title()
