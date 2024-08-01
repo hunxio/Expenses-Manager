@@ -7,7 +7,7 @@ import customtkinter
 import pandas as pd
 from datetime import date
 
-def add_expense(application) -> None:
+def add_expense(application: object) -> None:
 
     global payment_check, category_check, name_expense_input, amount_expense_input
 
@@ -107,16 +107,7 @@ def add_expense(application) -> None:
     submit_button = customtkinter.CTkButton(
         application, text="Conferma", command=submit_add_expense
     )
-    submit_button.grid(row=5, column=1, padx=0, pady=0)
-
-
-def category_event(variable_name: str) -> str:
-    return variable_name.get()
-
-
-def payment_event(variable_name: str) -> str:
-    return variable_name.get()
-
+    submit_button.grid(row=5, column=1, padx=0, pady=0, sticky="EW")
 
 def submit_add_expense() -> None:
     name_expense = name_expense_input.get().title().strip()
@@ -139,3 +130,11 @@ def submit_add_expense() -> None:
     }
 
     file_manager.csv_file(data)
+
+
+def category_event(variable_name: str) -> str:
+    return variable_name.get()
+
+
+def payment_event(variable_name: str) -> str:
+    return variable_name.get()
