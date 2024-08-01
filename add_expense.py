@@ -1,7 +1,7 @@
 # Root files
 import Constants
 import file_manager
-
+from utils import clear_widgets
 # Modules
 import customtkinter
 import pandas as pd
@@ -11,6 +11,9 @@ def add_expense(application: object) -> None:
 
     global payment_check, category_check, name_expense_input, amount_expense_input
 
+    # Delets columns content where column > 0
+    clear_widgets(application)
+    
     # Entry-label for Expense's name
     name_expense_label = customtkinter.CTkLabel(
         application,
