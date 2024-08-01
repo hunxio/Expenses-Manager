@@ -1,7 +1,7 @@
 # Root files
 import Constants
 import add_expense
-
+import check_expense
 # Modules
 import customtkinter
 import os
@@ -41,7 +41,7 @@ def gui():
     button_add_expense.grid(row=2, column=0, padx=10, pady=15)
 
     button_check_expense = customtkinter.CTkButton(
-        app, text="Controlla spese", command=None
+        app, text="Controlla spese", command=lambda: check_expense.check_expense(app)
     )
     button_check_expense.grid(row=3, column=0, padx=10, pady=15)
 
