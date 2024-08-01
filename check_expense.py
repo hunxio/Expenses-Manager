@@ -1,5 +1,6 @@
 # Root files
-from utils import clear_widgets
+from utils import clear_widgets, create_table
+from file_manager import open_csv_file
 # Modules
 import customtkinter
 import pandas as pd
@@ -7,12 +8,5 @@ import pandas as pd
 def check_expense(application: object) -> None:
     # Delets columns content where column > 0
     clear_widgets(application)
-    # Title label
-    application.grid_columnconfigure(1, weight=1)
-    title_label = customtkinter.CTkLabel(
-        application,
-        text="Resoconto delle spese",
-        fg_color="transparent",
-        font=("Monsterrat", 18),
-    )
-    title_label.grid(row=0, column=1, padx=20, pady=0)
+    headers, rows = open_csv_file("data.csv", "data.csv")
+    create_table(application, headers, rows)
