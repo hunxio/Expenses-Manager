@@ -109,6 +109,7 @@ def add_expense(application: object) -> None:
     )
     submit_button.grid(row=5, column=1, padx=0, pady=0, sticky="EW")
 
+
 def submit_add_expense() -> None:
     name_expense = name_expense_input.get().title().strip()
     amount_expense = amount_expense_input.get()
