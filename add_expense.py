@@ -5,7 +5,7 @@ import file_manager
 # Modules
 import customtkinter
 import pandas as pd
-
+from datetime import date
 
 def add_expense(application) -> None:
 
@@ -132,12 +132,14 @@ def submit_add_expense() -> None:
         amount_expense = "{:.2f}".format(float(amount_expense_replace)).strip()
     category = category_event(category_check).title()
     payment = payment_event(payment_check).title()
-
+    # YYYY-MM-DD
+    time = date.today()
     data = {
         "Name": [name_expense],
         "Category": [category],
         "Amount Expense": [amount_expense],
         "Payment Type": [payment],
+        "Date": [time]
     }
 
     file_manager.csv_file(data)
