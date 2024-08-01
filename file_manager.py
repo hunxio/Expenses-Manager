@@ -4,6 +4,7 @@ import Constants
 # Modules
 import os
 import pandas as pd
+import csv
 
 
 # Checks if the file exists in the path or not
@@ -21,6 +22,18 @@ def csv_file(data: dict) -> None:
         df.to_csv(csv_file, mode="a", index=False, header=True)
     else:
         df.to_csv(csv_file, mode="a", index=False, header=False)
+
+
+def open_csv_file(file_path: str, file: str) -> list:
+    try:
+        with open(file_path, mode='r', newline='') as file:
+            csv_reader = csv.reader(file)
+            headers = next(csv_reader)
+            rows = list(csv_reader)
+            return headers, rows
+    #TODO: FIX THE FILE MISSING ERROR
+    except (FileNotFoundError):
+        print("File not found")
 
 
 if __name__ == "__main__":
