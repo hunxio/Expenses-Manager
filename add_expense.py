@@ -110,7 +110,7 @@ def add_expense(application: object) -> None:
     submit_button = customtkinter.CTkButton(
         application, text="Conferma", command=submit_add_expense
     )
-    submit_button.grid(row=5, column=1, padx=0, pady=0, sticky="EW")
+    submit_button.grid(row=5, column=1, padx=0, pady=0)
 
 
 def submit_add_expense() -> None:
