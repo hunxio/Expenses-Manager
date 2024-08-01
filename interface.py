@@ -26,7 +26,7 @@ def gui():
 
     # Window Settings
     app.title("Gestore di spese")
-    app.geometry("650x550")
+    app.geometry("750x550")
 
     # Text Label side bar
     side_title_label = customtkinter.CTkLabel(
