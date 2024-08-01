@@ -79,10 +79,6 @@ def add_expense(application) -> None:
         application, placeholder_text="100,00", width=180
     )
     amount_expense_input.grid(row=3, column=2, padx=0, pady=0)
-    euro_label = customtkinter.CTkLabel(
-        application, text="€", fg_color="transparent", font=("Monsterrat", 18)
-    )
-    euro_label.grid(row=3, column=3, padx=0, pady=0)
 
     # Payment type
     payment_check = customtkinter.StringVar(value="")
