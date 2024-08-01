@@ -21,11 +21,11 @@ def add_expense(application: object) -> None:
         fg_color="transparent",
         font=("Monsterrat", 18),
     )
-    name_expense_label.grid(row=0, column=1, padx=20, pady=0)
+    name_expense_label.grid(row=0, column=1, padx=10, pady=0)
     name_expense_input = customtkinter.CTkEntry(
         application, placeholder_text="Spesa, Ristorante, Bolletta luce ...", width=250
     )
-    name_expense_input.grid(row=0, column=2, padx=0, pady=0)
+    name_expense_input.grid(row=0, column=2, padx=30, pady=0)
 
     # Category expense
     category_check = customtkinter.StringVar(value="")
