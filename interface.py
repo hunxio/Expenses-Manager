@@ -10,6 +10,7 @@ from PIL import Image
 
 def gui():
     app = customtkinter.CTk()
+    # Sets application color based on device system color
     customtkinter.set_appearance_mode("system")
 
     # Icon Image
