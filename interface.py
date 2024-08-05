@@ -2,6 +2,7 @@
 import Constants
 import add_expense
 import check_expense
+import graphic_chart
 # Modules
 import customtkinter
 import os
@@ -46,10 +47,10 @@ def gui():
     )
     button_check_expense.grid(row=3, column=0, padx=10, pady=15)
 
-    button_check_expense = customtkinter.CTkButton(
+    button_graphic_chart = customtkinter.CTkButton(
         app, text="Spesa Mensile", command=None
     )
-    button_check_expense.grid(row=4, column=0, padx=10, pady=15)
+    button_graphic_chart.grid(row=4, column=0, padx=10, pady=15)
 
     app.mainloop()
 
