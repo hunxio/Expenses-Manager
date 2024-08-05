@@ -52,6 +52,5 @@ def get_category_value(file_path: str) -> list:
                 chart_data.append([category, value])
         return chart_data
 
-
 if __name__ == "__main__":
     main()
