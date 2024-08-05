@@ -53,4 +53,5 @@ def get_category_value(file_path: str) -> list:
         return chart_data
 
 
-get_category_value("data.csv")
+if __name__ == "__main__":
+    main()
