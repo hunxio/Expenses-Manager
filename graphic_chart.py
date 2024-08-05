@@ -1,10 +1,14 @@
+# Root files
+from utils import clear_widgets
+from file_manager import get_category_value
+# Modules
 import customtkinter
 from matplotlib import pyplot
 import numpy
 
-from file_manager import get_category_value
-
 def make_graph(application: object) -> None:
+    # Delets columns content where column > 0
+    clear_widgets(application)
     try:
         data_chart = get_category_value("data.csv")
     except FileNotFoundError:
@@ -17,5 +21,6 @@ def make_graph(application: object) -> None:
         category.append(items[0])
         value.append(items[1])
 
-    figure = pyplot.figure(figsize=(10, 7))
+    figure = pyplot.figure(figsize=(8, 5))
     pyplot.pie(value, labels=category)
+    pyplot.show()
