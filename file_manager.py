@@ -24,7 +24,7 @@ def csv_file(data: dict) -> None:
         df.to_csv(csv_file, mode="a", index=False, header=False)
 
 
-def open_csv_file(file_path: str, file: str) -> list:
+def get_data(file_path: str, file: str) -> list:
     with open(file_path, mode='r', newline='') as file:
         csv_reader = csv.reader(file)
         headers = next(csv_reader)
