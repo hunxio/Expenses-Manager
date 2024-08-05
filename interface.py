@@ -48,7 +48,7 @@ def gui():
     button_check_expense.grid(row=3, column=0, padx=10, pady=15)
 
     button_graphic_chart = customtkinter.CTkButton(
-        app, text="Spesa Mensile", command=None
+        app, text="Spesa Mensile", command=graphic_chart.make_graph(app)
     )
     button_graphic_chart.grid(row=4, column=0, padx=10, pady=15)
 
